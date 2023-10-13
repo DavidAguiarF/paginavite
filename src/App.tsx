@@ -18,7 +18,7 @@ function App() {
         </a>
       <h1>Vite + React</h1>
       <div className="card">
-        <PostList /> {/* Render the PostList component to display the list of posts */}
+        <PostList /> {}
         
       </div>
       <p className="read-the-docs">
