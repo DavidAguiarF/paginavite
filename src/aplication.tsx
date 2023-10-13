@@ -1,6 +1,5 @@
-import React from 'react';
 import Counter from './Counter';
-import PostList from './postlist'; // Import the PostList component
+import {PostList} from './postlist'; // Me lo marca como error pero despues funciona, no entiendo que sucede
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <Counter initialCount={10} />
       </div>
       <div className="card">
-        <PostList /> {/* Use the PostList component to display posts */}
+        <PostList /> {}
       </div>
     </>
   );

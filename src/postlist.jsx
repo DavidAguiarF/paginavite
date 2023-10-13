@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
-function PostList() {
+export function PostList() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // Make an HTTP GET request to fetch the list of posts
+    //Esto es para coger las publicaciones de json
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
         if (!response.ok) {
@@ -12,9 +11,10 @@ function PostList() {
         }
         return response.json();
       })
-      .then((data) => {
-        // Process the data received from the API and set it in the state
-        setPosts(data.slice(0, 5)); // Display the first 5 posts
+      .then((data) => {//aqui estoy ordenado los post, me dieron bastante lata
+        const sortedData = data.slice(0, 5).sort((a, b) => a.title.localeCompare(b.title));
+        setPosts(sortedData);
+
       })
       .catch((error) => {
         console.error('There was a problem with the fetch operation:', error);
@@ -26,7 +26,7 @@ function PostList() {
       <h2>Recent Posts</h2>
       <ul>
         {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>{post.title}{post.tbody}</li>//intento coger el body pero no puedo
         ))}
       </ul>
     </div>

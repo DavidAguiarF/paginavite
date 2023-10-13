@@ -16,34 +16,25 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div>
       <h1>Vite + React</h1>
       <div className="card">
         <PostList /> {/* Render the PostList component to display the list of posts */}
-        <p>
-          Edit <code>src/App.js</code> and save to test HMR
-        </p>
+        
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </div>
       <div className="card">
-        <Counter initialCount={5} /> {/* Set the initial count value to 5 */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Counter initialCount={5} /> {/*Aqui es para empezar la cuenta en 5*/}
+        
       </div>
       <div className="card">
-        <Counter initialCount={10} /> {/* Set the initial count value to 5 */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Counter initialCount={10} /> {}
+        
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        El logo de React te llevara a su página. Allí podras aprender más.
       </p>
     </>
   );

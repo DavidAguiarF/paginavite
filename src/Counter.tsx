@@ -16,7 +16,7 @@ const Counter: React.FC<CounterProps> = ({ initialCount }) => {
       setCount(count - 1);
     }
   };
-
+/*Aqui quise poner un boton de reset pero al poner el Counterprops me dio errores y no supe resolverlo*/
   return (
     <div>
       <p>Count: {count}</p>
